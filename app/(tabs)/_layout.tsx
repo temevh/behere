@@ -30,6 +30,16 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
+        name="calendar"
+        options={{
+          title: "Calendar",
+          header: () => <Header />,
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="calendar.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="index"
         options={{
           title: "Main",
@@ -42,10 +52,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: "Explore",
+          title: "Settings",
           header: () => <Header />,
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <IconSymbol size={28} name="settings.fill" color={color} />
           ),
         }}
       />

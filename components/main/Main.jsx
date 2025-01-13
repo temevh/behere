@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
-import { SuccessButton, FailButton, TaskImage, TaskText } from "../main";
+import { SuccessButton, FailButton, TaskImage, TaskText } from ".";
 
-const MainTask = () => {
+const Main = () => {
   return (
     <View style={styles.container}>
       <TaskImage />
@@ -14,7 +14,7 @@ const MainTask = () => {
   );
 };
 
-export default MainTask;
+export default Main;
 
 const styles = StyleSheet.create({
   container: {
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttons: {
-    marginTop: 10,
+    marginTop: 40,
     alignItems: "center",
     gap: 10,
   },

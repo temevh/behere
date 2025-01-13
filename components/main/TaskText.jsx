@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 const TaskText = () => {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0");
   const day = String(currentDate.getDate()).padStart(2, "0");
 
   const formattedDate = `${day}.${month}.${year}`;
@@ -19,21 +19,22 @@ const TaskText = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 200,
-    width: 330,
-    borderRadius: 14,
+    height: 180,
+    width: 300,
+    borderRadius: 10,
     backgroundColor: "#595151",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 30,
+    gap: 10,
   },
   dateText: {
     fontSize: 22,
     color: "grey",
   },
   taskText: {
-    fontSize: 34,
+    fontSize: 28,
     color: "white",
-    paddingVertical: 20,
     textAlign: "center",
   },
   categoryText: {

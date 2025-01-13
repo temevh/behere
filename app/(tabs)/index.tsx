@@ -1,7 +1,5 @@
-import { View, StyleSheet, Button } from "react-native";
-
-import MainTask from "./components/main/MainTask";
+import Main from "../../components/main/Main";
 
 export default function HomeScreen() {
-  return <MainTask />;
+  return <Main />;
 }
