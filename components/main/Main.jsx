@@ -1,13 +1,20 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Pressable, Button } from "react-native";
 import { SuccessButton, FailButton, TaskImage, TaskText } from ".";
+import { useRouter } from "expo-router";
 
 const Main = () => {
+  const router = useRouter();
+
+  const successPressed = () => {
+    router.push("/success");
+  };
+
   return (
     <View style={styles.container}>
       <TaskImage />
       <TaskText />
       <View style={styles.buttons}>
-        <SuccessButton />
+        <SuccessButton successPressed={successPressed} />
         <FailButton />
       </View>
     </View>

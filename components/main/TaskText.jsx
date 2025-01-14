@@ -12,21 +12,20 @@ const TaskText = () => {
     <View style={styles.container}>
       <Text style={styles.dateText}>Daily task {formattedDate}</Text>
       <Text style={styles.taskText}>Read a book for 15 minutes</Text>
-      <Text style={styles.categoryText}>Education</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    height: 180,
+    height: 160,
     width: 300,
     borderRadius: 10,
     backgroundColor: "#595151",
     justifyContent: "center",
     alignItems: "center",
     marginTop: 30,
-    gap: 10,
+    gap: 15,
   },
   dateText: {
     fontSize: 22,

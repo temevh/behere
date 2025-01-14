@@ -1,20 +1,13 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
-import { useRouter } from "expo-router";
+import { Text, StyleSheet, Button } from "react-native";
 
-const SuccessButton = () => {
-  const router = useRouter();
-
-  const handlePress = () => {
-    console.log("succeed");
-    router.push("/(tabs)/reviewView/TaskSucceeded");
-  };
-
+const SuccessButton = ({ successPressed }) => {
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
-      <View style={styles.whiteContainer}></View>
-      <Text style={styles.textStyle}>I did it!</Text>
-    </TouchableOpacity>
+    <Button
+      style={styles.buttonStyle}
+      onPress={successPressed}
+      title="I did it!"
+    />
   );
 };
 
