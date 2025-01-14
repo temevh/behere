@@ -1,13 +1,12 @@
 import React from "react";
-import { Text, StyleSheet, Button } from "react-native";
+import { Text, StyleSheet, Pressable, View } from "react-native";
 
 const SuccessButton = ({ successPressed }) => {
   return (
-    <Button
-      style={styles.buttonStyle}
-      onPress={successPressed}
-      title="I did it!"
-    />
+    <Pressable style={styles.buttonStyle} onPress={successPressed}>
+      <View style={styles.whiteContainer} />
+      <Text style={styles.textStyle}>I did it!</Text>
+    </Pressable>
   );
 };
 
@@ -22,20 +21,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#13ae5c",
     position: "relative",
+    overflow: "hidden",
   },
   whiteContainer: {
     height: 70,
     width: 160,
     borderRadius: 24,
-    backgroundColor: "white",
+    backgroundColor: "black",
     position: "absolute",
     zIndex: 1,
+    opacity: 0.3,
   },
   textStyle: {
     fontWeight: "bold",
-    color: "black",
-    opacity: 1,
-    fontSize: 34,
+    color: "white",
+    fontSize: 42,
     zIndex: 2,
   },
 });
