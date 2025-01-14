@@ -35,7 +35,7 @@ export default function TabLayout() {
           title: "Calendar",
           header: () => <Header />,
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="calendar.fill" color={color} />
+            <IconSymbol size={28} name="calendar" color={color} />
           ),
         }}
       />
@@ -45,7 +45,7 @@ export default function TabLayout() {
           title: "Main",
           header: () => <Header />,
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <IconSymbol size={28} name="house" color={color} />
           ),
         }}
       />
@@ -55,7 +55,7 @@ export default function TabLayout() {
           title: "Settings",
           header: () => <Header />,
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="settings.fill" color={color} />
+            <IconSymbol size={28} name="settings" color={color} />
           ),
         }}
       />
