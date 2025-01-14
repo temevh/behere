@@ -1,8 +1,11 @@
 import { View, StyleSheet, Text, Button } from "react-native";
 import { SliderInput, Checkbox } from "../components/success/";
 import { useState } from "react";
+import { useRouter } from "expo-router";
 
 export default function SuccessScreen() {
+  const router = useRouter();
+
   const [hard, setHard] = useState(1);
   const [fun, setFun] = useState(1);
   const [again, setAgain] = useState(false);
@@ -11,6 +14,7 @@ export default function SuccessScreen() {
     console.log("hard:", hard);
     console.log("fun:", fun);
     console.log("again:", again);
+    router.push("/");
   };
 
   return (
