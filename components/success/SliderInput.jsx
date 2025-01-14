@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import Slider from "@react-native-community/slider";
 
-const SliderInput = ({ title, setHard }) => {
+const SliderInput = ({ title, updateSliderValue }) => {
   const [value, setValue] = useState(1);
   const ValueChanged = (newValue) => {
-    setHard(newValue);
+    updateSliderValue(newValue);
     setValue(newValue);
   };
 
@@ -15,8 +15,8 @@ const SliderInput = ({ title, setHard }) => {
       <Text style={styles.valueText}>{value}</Text>
       <Slider
         style={{ width: 300, height: 40 }}
-        minimumValue={0}
-        maximumValue={10}
+        minimumValue={1}
+        maximumValue={6}
         step={1}
         thumbTintColor="white"
         onValueChange={(newValue) => ValueChanged(newValue)}
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: "darkgreen",
-    flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
