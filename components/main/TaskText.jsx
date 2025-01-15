@@ -30,15 +30,18 @@ const styles = StyleSheet.create({
   dateText: {
     fontSize: 22,
     color: "grey",
+    fontFamily: "RobotoMono",
   },
   taskText: {
     fontSize: 28,
     color: "white",
     textAlign: "center",
+    fontFamily: "RobotoMono",
   },
   categoryText: {
     fontSize: 20,
     color: "grey",
+    fontFamily: "RobotoMono",
   },
 });
 

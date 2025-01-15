@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text } from "react-native";
-import BouncyCheckbox from "react-native-bouncy-checkbox";
+import Checkbox from "expo-checkbox";
 
-const Checkbox = ({ title, updateCheckboxValue }) => {
+const CheckboxInput = ({ title, updateCheckboxValue }) => {
+  const [isChecked, setChecked] = useState(false);
+
   const checkboxPressed = (isChecked) => {
     updateCheckboxValue(isChecked);
+    setChecked(isChecked);
   };
 
   return (
     <View style={styles.container}>
-      <BouncyCheckbox
-        size={40}
-        text="Custom Checkbox"
-        innerIconStyle={{ borderRadius: 0 }}
-        onPress={(isChecked) => {
-          checkboxPressed(isChecked);
+      <Checkbox
+        style={styles.checkbox}
+        value={isChecked}
+        onValueChange={(newValue) => {
+          checkboxPressed(newValue);
         }}
       />
       <Text style={styles.text}>{title}</Text>
@@ -22,15 +24,19 @@ const Checkbox = ({ title, updateCheckboxValue }) => {
   );
 };
 
-export default Checkbox;
+export default CheckboxInput;
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 24,
     color: "white",
+    fontFamily: "RobotoMono",
   },
   container: {
     flexDirection: "row",
     justifyContent: "center",
+  },
+  checkbox: {
+    margin: 8,
   },
 });

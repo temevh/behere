@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, Button } from "react-native";
-import { SliderInput, Checkbox } from "../components/success/";
+import { SliderInput, CheckboxInput } from "../components/success/";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 
@@ -28,7 +28,7 @@ export default function SuccessScreen() {
         title={"How much did you enjoy the task?"}
         updateSliderValue={setFun}
       />
-      <Checkbox title={"Again?"} updateCheckboxValue={setAgain} />
+      <CheckboxInput title={"Again?"} updateCheckboxValue={setAgain} />
       <Button title="Save" onPress={submitPressed} />
     </View>
   );

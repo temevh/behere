@@ -15,7 +15,7 @@ export default SuccessButton;
 const styles = StyleSheet.create({
   buttonStyle: {
     height: 80,
-    width: 170,
+    width: 200,
     borderRadius: 24,
     justifyContent: "center",
     alignItems: "center",
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   whiteContainer: {
     height: 70,
-    width: 160,
+    width: 190,
     borderRadius: 24,
     backgroundColor: "black",
     position: "absolute",
@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
     opacity: 0.3,
   },
   textStyle: {
-    fontWeight: "bold",
     color: "white",
-    fontSize: 42,
+    fontSize: 26,
     zIndex: 2,
+    fontFamily: "RobotoMono",
   },
 });

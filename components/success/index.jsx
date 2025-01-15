@@ -1,4 +1,4 @@
 import SliderInput from "./SliderInput";
-import Checkbox from "./Checkbox";
+import CheckboxInput from "./Checkbox";
 
-export { SliderInput, Checkbox };
+export { SliderInput, CheckboxInput };

@@ -12,7 +12,6 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <TaskImage />
-      <Text style={{ fontFamily: "RobotoMono", color: "white" }}>Testi</Text>
       <TaskText />
       <View style={styles.buttons}>
         <SuccessButton successPressed={successPressed} />
