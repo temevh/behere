@@ -1,5 +1,9 @@
 import { View, StyleSheet, Text, Button } from "react-native";
-import { SliderInput, CheckboxInput } from "../components/success/";
+import {
+  SliderInput,
+  CheckboxInput,
+  SaveSuccessButton,
+} from "../components/success/";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 
@@ -10,7 +14,7 @@ export default function SuccessScreen() {
   const [fun, setFun] = useState(1);
   const [again, setAgain] = useState(false);
 
-  const submitPressed = () => {
+  const savePressed = () => {
     console.log("hard:", hard);
     console.log("fun:", fun);
     console.log("again:", again);
@@ -29,7 +33,7 @@ export default function SuccessScreen() {
         updateSliderValue={setFun}
       />
       <CheckboxInput title={"Again?"} updateCheckboxValue={setAgain} />
-      <Button title="Save" onPress={submitPressed} />
+      <SaveSuccessButton savePressed={savePressed} isDisabled={false} />
     </View>
   );
 }
@@ -50,4 +54,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 100,
   },
+  saveButton: {},
 });
