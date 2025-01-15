@@ -3,16 +3,14 @@ import { StyleSheet, View, Text } from "react-native";
 import Slider from "@react-native-community/slider";
 
 const SliderInput = ({ title, updateSliderValue }) => {
-  const [value, setValue] = useState(1);
   const ValueChanged = (newValue) => {
     updateSliderValue(newValue);
-    setValue(newValue);
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{title}</Text>
-      <Text style={styles.valueText}>{value}</Text>
+      {/*<Text style={styles.valueText}>{value}</Text>*/}
       <View style={styles.sliderContainer}>
         <Text style={styles.minMaxText}>1</Text>
         <Slider
@@ -31,12 +29,14 @@ const SliderInput = ({ title, updateSliderValue }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
+    fontSize: 28,
     color: "white",
     fontFamily: "RobotoMono",
+    padding: 16,
+    textAlign: "center",
   },
   valueText: {
-    fontSize: 18,
+    fontSize: 22,
     color: "white",
     fontFamily: "RobotoMono",
   },
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     width: 300,
   },
   minMaxText: {
-    fontSize: 16,
+    fontSize: 20,
     color: "white",
     marginHorizontal: 16,
     fontFamily: "RobotoMono",

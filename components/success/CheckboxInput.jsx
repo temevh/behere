@@ -31,12 +31,17 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: "white",
     fontFamily: "RobotoMono",
+    marginLeft: 10,
   },
   container: {
     flexDirection: "row",
+    alignItems: "center",
     justifyContent: "center",
+    padding: 20,
   },
   checkbox: {
+    height: 40,
+    width: 40,
     margin: 8,
   },
 });

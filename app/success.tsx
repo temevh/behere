@@ -18,7 +18,10 @@ export default function SuccessScreen() {
     console.log("hard:", hard);
     console.log("fun:", fun);
     console.log("again:", again);
-    router.push("/");
+    router.push({
+      pathname: "/",
+      params: { completed: 1 },
+    });
   };
 
   return (
@@ -33,7 +36,10 @@ export default function SuccessScreen() {
           title={"How much did you enjoy the task?"}
           updateSliderValue={setFun}
         />
-        <CheckboxInput title={"Again?"} updateCheckboxValue={setAgain} />
+        <CheckboxInput
+          title={"Would you like a similar task again?"}
+          updateCheckboxValue={setAgain}
+        />
       </View>
       <View style={styles.saveButton}>
         <SaveSuccessButton savePressed={savePressed} isDisabled={false} />
