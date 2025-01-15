@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, Button } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import {
   SliderInput,
   CheckboxInput,
@@ -24,16 +24,20 @@ export default function SuccessScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Good job!</Text>
-      <SliderInput
-        title={"How hard was the task?"}
-        updateSliderValue={setHard}
-      />
-      <SliderInput
-        title={"How much did you enjoy the task?"}
-        updateSliderValue={setFun}
-      />
-      <CheckboxInput title={"Again?"} updateCheckboxValue={setAgain} />
-      <SaveSuccessButton savePressed={savePressed} isDisabled={false} />
+      <View style={styles.centerContent}>
+        <SliderInput
+          title={"How hard was the task?"}
+          updateSliderValue={setHard}
+        />
+        <SliderInput
+          title={"How much did you enjoy the task?"}
+          updateSliderValue={setFun}
+        />
+        <CheckboxInput title={"Again?"} updateCheckboxValue={setAgain} />
+      </View>
+      <View style={styles.saveButton}>
+        <SaveSuccessButton savePressed={savePressed} isDisabled={false} />
+      </View>
     </View>
   );
 }
@@ -42,17 +46,22 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 32,
     color: "white",
-    position: "absolute",
-    top: 50,
-    alignSelf: "center",
     fontFamily: "RobotoMono",
+    marginTop: 50,
+    textAlign: "center",
   },
   container: {
     backgroundColor: "darkgreen",
     flex: 1,
+    paddingHorizontal: 20,
+  },
+  centerContent: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 100,
   },
-  saveButton: {},
+  saveButton: {
+    marginBottom: 20,
+    alignSelf: "center",
+  },
 });

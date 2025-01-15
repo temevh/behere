@@ -1,4 +1,5 @@
 import { Button } from "react-native-paper";
+import { StyleSheet } from "react-native";
 
 const SaveSuccessButton = ({ savePressed, isDisabled }) => {
   return (
@@ -7,11 +8,9 @@ const SaveSuccessButton = ({ savePressed, isDisabled }) => {
       disabled={isDisabled}
       onPress={savePressed}
       buttonColor="green"
-      style={{ borderRadius: 6 }}
-      labelStyle={{
-        fontSize: 16,
-        fontFamily: "RobotoMono",
-      }}
+      style={styles.button}
+      contentStyle={styles.content}
+      labelStyle={styles.text}
     >
       Save
     </Button>
@@ -19,3 +18,23 @@ const SaveSuccessButton = ({ savePressed, isDisabled }) => {
 };
 
 export default SaveSuccessButton;
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 30,
+    fontFamily: "RobotoMono",
+    paddingTop: 15,
+  },
+  button: {
+    height: 60,
+    width: 200,
+    justifyContent: "center",
+    alignItems: "center",
+    borderColor: "white",
+    borderWidth: 3,
+  },
+  content: {
+    height: "100%",
+    justifyContent: "center",
+  },
+});
