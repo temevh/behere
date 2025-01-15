@@ -14,7 +14,7 @@ export default SuccessButton;
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    height: 80,
+    height: 70,
     width: 200,
     borderRadius: 24,
     justifyContent: "center",
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   whiteContainer: {
-    height: 70,
+    height: 60,
     width: 190,
     borderRadius: 24,
     backgroundColor: "black",

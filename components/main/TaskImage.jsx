@@ -2,17 +2,19 @@ import { View, Image, StyleSheet } from "react-native";
 
 const TaskImage = () => {
   return (
-    <Image
-      source={require("../../assets/images/reading.png")}
-      style={styles.image}
-    />
+    <View>
+      <Image
+        source={require("../../assets/images/reading.png")}
+        style={styles.image}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   image: {
-    width: 260,
-    height: 260,
+    width: 220,
+    height: 220,
   },
 });
 

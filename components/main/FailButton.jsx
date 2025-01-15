@@ -21,7 +21,7 @@ export default FailButton;
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    height: 60,
+    height: 50,
     width: 160,
     borderRadius: 16,
     justifyContent: "center",
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     position: "relative",
   },
   whiteContainer: {
-    height: 54,
+    height: 44,
     width: 154,
     borderRadius: 16,
     backgroundColor: "white",
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   textStyle: {
     fontWeight: "bold",
     color: "black",
-    fontSize: 28,
+    fontSize: 24,
     fontFamily: "RobotoMono",
     zIndex: 2,
   },

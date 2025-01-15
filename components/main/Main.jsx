@@ -43,9 +43,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 20,
   },
   buttons: {
-    marginTop: 40,
+    marginTop: 20,
     alignItems: "center",
     gap: 10,
   },

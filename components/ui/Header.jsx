@@ -11,10 +11,9 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 40,
+    marginTop: 34,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "black",
   },
   headerText: {
     color: "white",

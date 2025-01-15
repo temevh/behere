@@ -18,29 +18,25 @@ const TaskText = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 160,
-    width: 300,
-    borderRadius: 10,
+    height: 140,
+    width: 320,
+    borderRadius: 6,
     backgroundColor: "#595151",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 30,
-    gap: 15,
+    opacity: 0.9,
+    marginTop: 20,
+    gap: 10,
   },
   dateText: {
     fontSize: 22,
-    color: "grey",
+    color: "darkgrey",
     fontFamily: "RobotoMono",
   },
   taskText: {
     fontSize: 28,
     color: "white",
     textAlign: "center",
-    fontFamily: "RobotoMono",
-  },
-  categoryText: {
-    fontSize: 20,
-    color: "grey",
     fontFamily: "RobotoMono",
   },
 });
