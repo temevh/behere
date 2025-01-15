@@ -26,10 +26,12 @@ const Main = () => {
     >
       <TaskImage />
       <TaskText />
-      <View style={styles.buttons}>
-        <SuccessButton successPressed={successPressed} />
-        <FailButton />
-      </View>
+      {!isDone && (
+        <View style={styles.buttons}>
+          <SuccessButton successPressed={successPressed} />
+          <FailButton />
+        </View>
+      )}
     </View>
   );
 };
