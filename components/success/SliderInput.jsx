@@ -31,13 +31,14 @@ const SliderInput = ({ title, updateSliderValue }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 24,
-    color: "white",
-    fontWeight: "bold",
-  },
-  valueText: {
     fontSize: 20,
     color: "white",
+    fontFamily: "RobotoMono",
+  },
+  valueText: {
+    fontSize: 18,
+    color: "white",
+    fontFamily: "RobotoMono",
   },
   container: {
     backgroundColor: "darkgreen",
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "white",
     marginHorizontal: 16,
+    fontFamily: "RobotoMono",
   },
 });
 

@@ -11,11 +11,8 @@ const Checkbox = ({ title, updateCheckboxValue }) => {
     <View style={styles.container}>
       <BouncyCheckbox
         size={40}
-        fillColor="gray"
-        unFillColor="#FFFFFF"
         text="Custom Checkbox"
-        iconStyle={{ borderColor: "red" }}
-        innerIconStyle={{ borderWidth: 1 }}
+        innerIconStyle={{ borderRadius: 0 }}
         onPress={(isChecked) => {
           checkboxPressed(isChecked);
         }}

@@ -29,7 +29,7 @@ export default function SuccessScreen() {
         updateSliderValue={setFun}
       />
       <Checkbox title={"Again?"} updateCheckboxValue={setAgain} />
-      <Button title="Submit" onPress={submitPressed} />
+      <Button title="Save" onPress={submitPressed} />
     </View>
   );
 }
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 50,
     alignSelf: "center",
+    fontFamily: "RobotoMono",
   },
   container: {
     backgroundColor: "darkgreen",

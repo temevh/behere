@@ -1,4 +1,4 @@
-import { View, StyleSheet, Pressable, Button } from "react-native";
+import { View, StyleSheet, Pressable, Button, Text } from "react-native";
 import { SuccessButton, FailButton, TaskImage, TaskText } from ".";
 import { useRouter } from "expo-router";
 
@@ -12,6 +12,7 @@ const Main = () => {
   return (
     <View style={styles.container}>
       <TaskImage />
+      <Text style={{ fontFamily: "RobotoMono", color: "white" }}>Testi</Text>
       <TaskText />
       <View style={styles.buttons}>
         <SuccessButton successPressed={successPressed} />
