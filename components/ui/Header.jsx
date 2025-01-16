@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Header = () => {
+const Header = ({ backgroundColor }) => {
   return (
-    <View style={styles.headerContainer}>
+    <View style={[styles.headerContainer, { backgroundColor }]}>
       <Text style={styles.headerText}>BeHere</Text>
     </View>
   );
@@ -14,6 +14,8 @@ const styles = StyleSheet.create({
     marginTop: 34,
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
+    paddingVertical: 10,
   },
   headerText: {
     color: "white",
