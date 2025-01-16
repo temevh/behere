@@ -1,11 +1,12 @@
 import { View, StyleSheet } from "react-native";
-import { SuccessButton, FailButton, TaskImage, TaskText } from ".";
-import { useRouter, useLocalSearchParams } from "expo-router";
+import { SuccessButton, TaskImage, TaskText } from ".";
+import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Button } from "react-native-paper";
 
 const Main = () => {
   const router = useRouter();
-  const { completed } = useLocalSearchParams();
   const [isDone, setIsDone] = useState(0);
 
   const successPressed = () => {
@@ -13,9 +14,31 @@ const Main = () => {
   };
 
   useEffect(() => {
-    setIsDone(completed);
-    console.log("completed:", completed);
-  }, [completed]);
+    const checkAsync = async () => {
+      try {
+        const hard = await AsyncStorage.getItem("hard");
+        const fun = await AsyncStorage.getItem("fun");
+        const again = await AsyncStorage.getItem("again");
+        const completed = await AsyncStorage.getItem("completed");
+        if (hard !== null) {
+          console.log("hard in main: ", JSON.parse(hard));
+        }
+        if (fun !== null) {
+          console.log("fun in main: ", JSON.parse(fun));
+        }
+        if (again !== null) {
+          console.log("again in main: ", JSON.parse(again));
+        }
+        if (completed !== null) {
+          setIsDone(true);
+          console.log("completed in main: ", JSON.parse(completed));
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    checkAsync();
+  }, []);
 
   return (
     <View
@@ -26,10 +49,11 @@ const Main = () => {
     >
       <TaskImage />
       <TaskText />
+      <Button>Async</Button>
       {!isDone && (
         <View style={styles.buttons}>
           <SuccessButton successPressed={successPressed} />
-          <FailButton />
+          {/*<FailButton failPressed={failPressed} />*/}
         </View>
       )}
     </View>

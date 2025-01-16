@@ -7,6 +7,8 @@ import {
 import { useState } from "react";
 import { useRouter } from "expo-router";
 
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 export default function SuccessScreen() {
   const router = useRouter();
 
@@ -14,13 +16,17 @@ export default function SuccessScreen() {
   const [fun, setFun] = useState(1);
   const [again, setAgain] = useState(false);
 
-  const savePressed = () => {
-    console.log("hard:", hard);
-    console.log("fun:", fun);
-    console.log("again:", again);
+  const savePressed = async () => {
+    try {
+      await AsyncStorage.setItem("hard", JSON.stringify(hard));
+      await AsyncStorage.setItem("fun", JSON.stringify(fun));
+      await AsyncStorage.setItem("again", JSON.stringify(again));
+      await AsyncStorage.setItem("completed", JSON.stringify(true));
+    } catch (e) {
+      console.log(e);
+    }
     router.push({
       pathname: "/",
-      params: { completed: 1 },
     });
   };
 

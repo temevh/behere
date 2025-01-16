@@ -7,7 +7,6 @@ const FailButton = () => {
 
   const handlePress = () => {
     console.log("fail");
-    router.push("/(tabs)/reviewView/TaskFailed");
   };
   return (
     <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
